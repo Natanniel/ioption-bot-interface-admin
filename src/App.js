@@ -126,7 +126,7 @@ function App() {
                         <td>{cli.status == 1 ? 'Ativo' : 'Inativo'}</td>
                         <td>{cli.nome}</td>
                         <td>{cli.email}</td>
-                        <td>{cli.proximo_pagamento.split('-')[2] + '/' + cli.proximo_pagamento.split('-')[1] + '/' + cli.proximo_pagamento.split('-')[0]}</td>
+                        <td>{cli.proximo_pagamento}</td>
                         <td><button type="button" onClick={() => editarCadastro(cli.id)} class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></td>
                       </tr>
 
