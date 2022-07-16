@@ -1,5 +1,5 @@
 const server = require("./app");
 
-server.listen(3000, async function () {
+server.listen(3100, async function () {
   console.log("Servidor IQOption em funcionamento !");
 });
