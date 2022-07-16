@@ -39,6 +39,7 @@ class App {
             const db = new sqlite3.Database(__dirname + '/../database.db');
             db.serialize(() => {
                 db.all("SELECT * FROM clientes", (err, clientes) => {
+                    console.log(clientes)
                     res.send(clientes)
                 });
             });
