@@ -65,6 +65,17 @@ class App {
             res.send()
         });
 
+        this.server.get('/hardreset', async function (req, res) {
+
+            const db = new sqlite3.Database(__dirname + '/../database.db');
+            let {email, senha} = req.body;
+            console.log( req.body)
+            const stmt = db.prepare("delete from clientes");
+            stmt.run()
+            stmt.finalize();
+            res.send({message:'resetado'})
+        });
+
         this.server.post('/atualizaclientes', async function (req, res) {
 
             const db = new sqlite3.Database(__dirname + '/../database.db');
