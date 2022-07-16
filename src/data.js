@@ -2,7 +2,7 @@ import axios from "axios";
 //import Cookies from "js-cookie";
 
 //var token = Cookies.get("apollo");
-var host = "http://143.198.244.180:3000";
+var host = "http://143.198.244.180:3100";
 
 const api = axios.create({
   baseURL: host,
