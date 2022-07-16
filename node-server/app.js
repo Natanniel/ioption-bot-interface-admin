@@ -49,7 +49,7 @@ class App {
 
             const db = new sqlite3.Database(__dirname + '/../database.db');
             let { status, nome, email, proximoPagamento , whatsapp} = req.body;
-            const stmt = db.prepare("INSERT INTO clientes (status,nome,email,whatsapp,proximo_pagamento) VALUES (" + status + ",'" + nome + "','" + email + "','"+whatsapp+"','" + proximoPagamento + "')");
+            const stmt = db.prepare("INSERT INTO clientes (status,nome,email,whatsapp,proximo_pagamento,senha) VALUES (" + status + ",'" + nome + "','" + email + "','"+whatsapp+"','" + proximoPagamento + "','123456')");
             stmt.run()
             stmt.finalize();
             res.send()
